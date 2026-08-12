@@ -30,7 +30,6 @@ for (const viewport of viewports) {
 test("supports keyboard opener, tabs, accordion, and replay", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("button", { name: "Open the field guide" })).toBeVisible();
-  await page.keyboard.press("Tab");
   await expect(page.getByRole("button", { name: "Open the field guide" })).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.getByRole("heading", { name: "Make the story move" })).toBeFocused();

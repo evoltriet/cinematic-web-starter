@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.GITHUB_ACTIONS ? "/cinematic-web-starter/" : "/",
+  base: process.env.GITHUB_PAGES === "true" ? "/cinematic-web-starter/" : "/",
   build: { sourcemap: true },
 });
