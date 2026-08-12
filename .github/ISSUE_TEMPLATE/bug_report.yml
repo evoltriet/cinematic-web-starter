@@ -1,0 +1,21 @@
+name: Bug report
+description: Report a reproducible problem in the starter or demo.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes: { label: What happened?, description: Include expected and actual behavior. }
+    validations: { required: true }
+  - type: input
+    id: viewport
+    attributes: { label: Browser and viewport, placeholder: "Chrome 140, 390×844" }
+    validations: { required: true }
+  - type: dropdown
+    id: reduced-motion
+    attributes: { label: Reduced-motion setting, options: [No preference, Reduce, Both] }
+    validations: { required: true }
+  - type: textarea
+    id: reproduction
+    attributes: { label: Reproduction, description: Provide the smallest reproducible steps or repository. }
+    validations: { required: true }

@@ -1,0 +1,16 @@
+name: Feature request
+description: Propose a generic addition to the framework or playbook.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes: { label: Problem, description: What reusable web/mobile problem should this solve? }
+    validations: { required: true }
+  - type: textarea
+    id: proposal
+    attributes: { label: Proposed behavior, description: Include accessibility, mobile, and reduced-motion expectations. }
+    validations: { required: true }
+  - type: textarea
+    id: tradeoffs
+    attributes: { label: Performance and API tradeoffs }
