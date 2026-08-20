@@ -13,7 +13,8 @@ Version 0.2.0 of Cinematic Web Framework.
 - Production build, sanitization, and budgets: passed locally at 95.7 KB JavaScript and 4.8 KB CSS gzip, with no raster demo assets.
 - Playwright: eight checks passed across desktop, tablet, 390px, 360px, mobile landscape, keyboard, and reduced motion.
 - Portable skill: passed the official skill validator.
-- Lighthouse and hosted Pages verification: required in CI before the release decision is finalized.
+- Pull-request CI passed the exact `pnpm validate` and Playwright workflow on GitHub.
+- Lighthouse scored 100 for performance, accessibility, best practices, and SEO against the production build.
 
 ## Manual review
 
@@ -22,4 +23,4 @@ Version 0.2.0 of Cinematic Web Framework.
 
 ## Release decision
 
-Hold the final tag until pull-request CI, Lighthouse, and Pages deployment pass on the validated merge commit.
+Approved to merge after the QA-report-only commit revalidates. Create the final tag only after the merged GitHub Pages deployment is healthy.
