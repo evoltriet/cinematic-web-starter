@@ -170,7 +170,7 @@ export default function App() {
   return (
     <MotionProvider>
       <CeremonialGate focusTargetRef={titleRef} enterLabel="Open the field guide" recipient="A small study in depth">
-        {({ cycle, replay }) => <div ref={(node) => { if (node) titleRef.current = node.querySelector("h1"); }}><Experience cycle={cycle} replay={replay} /></div>}
+        {({ cycle, replay, revealed }) => <div ref={(node) => { if (node) titleRef.current = node.querySelector("h1"); }}>{revealed ? <Experience cycle={cycle} replay={replay} /> : null}</div>}
       </CeremonialGate>
     </MotionProvider>
   );

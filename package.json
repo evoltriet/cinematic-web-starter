@@ -14,7 +14,7 @@
     "test": "vitest run",
     "test:browser": "playwright test",
     "test:browser:install": "playwright install chromium",
-    "test:tooling": "node --test --test-isolation=none tests/tooling.test.mjs",
+    "test:tooling": "node --test tests/tooling.test.mjs",
     "test:budgets": "node scripts/check-budgets.mjs",
     "test:sanitize": "node scripts/check-sanitization.mjs",
     "cinematic:init": "node scripts/cinematic-init.mjs",
