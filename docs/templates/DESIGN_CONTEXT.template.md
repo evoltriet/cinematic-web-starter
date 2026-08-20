@@ -1,36 +1,23 @@
 # Design Context
 
-## Direction
+Last updated: {{DATE}}
 
-Describe cultural/product anchors, emotional tone, and what supports rather than leads.
+## Art direction
 
-## Tokens
+Describe the emotional, cultural, editorial, and material direction.
 
-- Colors:
-- Typography and character-set requirements:
-- Spacing:
-- Geometry:
-- Depth:
-- Motion durations and easing:
+## Design tokens
 
-## Composition rules
+Record exact color, type, spacing, geometry, texture, depth, and timing choices.
 
-- First viewport:
-- Desktop:
-- Mobile:
-- Dense information and forms:
+## Responsive composition
 
-## Motion rules
+Describe independent desktop and mobile composition decisions.
 
-- Entrance:
-- Triggered passage:
-- Local scroll story:
-- Reduced motion:
+## Motion language
 
-## Avoid
+Define the small vocabulary of approved motion and its physical character.
 
-- List visual clichés, unsuitable dependencies, performance hazards, and cultural misrepresentations.
+## Anti-patterns
 
-## References and licenses
-
-Record every external reference, whether source was copied, and its license.
+List visual and interaction choices that would violate the direction.

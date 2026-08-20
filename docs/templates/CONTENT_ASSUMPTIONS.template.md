@@ -1,17 +1,15 @@
 # Content Assumptions
 
-Internal only. The product must not expose planning-status labels unless explicitly designed to do so.
+Last updated: {{DATE}}
 
-## Verified facts
+## Verified content
 
-- Confirmed statement — owner/source.
+- Record confirmed copy, facts, actions, and owners.
 
-## Assumed guest/user-facing content
+## Assumptions
 
-| Area | Current presentation | Replacement condition | Owner |
-| --- | --- | --- | --- |
-| Example | Confident temporary copy | Replace after approval | Product owner |
+- Record invented or provisional content and the decision it enables.
 
-## Activation backlog
+## Replacement protocol
 
-- External accounts, credentials, imports, schedules, or launch decisions not yet active.
+- State who can verify each assumption and how dependent surfaces must be updated.

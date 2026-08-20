@@ -1,0 +1,75 @@
+{
+  "$schema": "./schemas/cinematic-config.schema.json",
+  "schemaVersion": 1,
+  "project": {
+    "name": "Cinematic Web Framework",
+    "audience": "Designers, frontend engineers, and coding agents building expressive web experiences",
+    "primaryAction": "Explore the agent-ready workflow",
+    "firstViewportPromise": "A cinematic field guide that remains semantic, responsive, and fast"
+  },
+  "chapters": [
+    {
+      "id": "arrival",
+      "title": "Arrival",
+      "motionMode": "reveal",
+      "composition": "full-bleed editorial hero",
+      "decorativePlanes": 2
+    },
+    {
+      "id": "passage",
+      "title": "Passage",
+      "motionMode": "local-scroll-story",
+      "composition": "contained horizontal narrative",
+      "decorativePlanes": 0
+    },
+    {
+      "id": "workflow",
+      "title": "Agent workflow",
+      "motionMode": "reveal",
+      "composition": "four-step editorial sequence",
+      "decorativePlanes": 1
+    },
+    {
+      "id": "field-notes",
+      "title": "Field notes",
+      "motionMode": "triggered-passage",
+      "composition": "paired paper panels",
+      "decorativePlanes": 1
+    },
+    {
+      "id": "quiet-zone",
+      "title": "Quiet zone",
+      "motionMode": "static",
+      "composition": "static form boundary",
+      "decorativePlanes": 0
+    }
+  ],
+  "responsive": {
+    "mobileBreakpointPx": 700,
+    "tabletBreakpointPx": 900,
+    "mobileStrategy": "art-directed"
+  },
+  "motion": {
+    "runtime": "motion",
+    "nativeScrolling": true,
+    "globalScene": false,
+    "pointerTracking": false,
+    "maxDecorativePlanesPerChapter": 2,
+    "maxLocalScrollStories": 1
+  },
+  "budgets": {
+    "initialJavaScriptGzipKb": 180,
+    "cssGzipKb": 30,
+    "heroImageKb": 400,
+    "mobileImagesTotalKb": 1800,
+    "desktopImagesTotalKb": 3000
+  },
+  "accessibility": {
+    "keyboard": true,
+    "reducedMotion": "complete-static",
+    "textZoomPercent": 200,
+    "contrast": "WCAG-AA",
+    "minimumTouchTargetPx": 44
+  },
+  "exceptions": []
+}

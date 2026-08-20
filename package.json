@@ -1,6 +1,6 @@
 {
-  "name": "cinematic-web-starter",
-  "version": "0.1.0",
+  "name": "cinematic-web-framework",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "engines": { "node": ">=22.13.0" },
@@ -14,9 +14,13 @@
     "test": "vitest run",
     "test:browser": "playwright test",
     "test:browser:install": "playwright install chromium",
+    "test:tooling": "node --test tests/tooling.test.mjs",
     "test:budgets": "node scripts/check-budgets.mjs",
     "test:sanitize": "node scripts/check-sanitization.mjs",
-    "validate": "pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm test:budgets && pnpm test:sanitize"
+    "cinematic:init": "node scripts/cinematic-init.mjs",
+    "cinematic:check": "node scripts/cinematic-check.mjs",
+    "cinematic:context": "node scripts/cinematic-context.mjs",
+    "validate": "pnpm cinematic:check && pnpm lint && pnpm typecheck && pnpm test && pnpm test:tooling && pnpm build && pnpm test:budgets && pnpm test:sanitize"
   },
   "dependencies": {
     "motion": "^13.0.0",

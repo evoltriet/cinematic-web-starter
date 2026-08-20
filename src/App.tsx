@@ -18,8 +18,21 @@ import {
 const navItems = [
   { id: "arrival", label: "Arrival" },
   { id: "passage", label: "Passage" },
+  { id: "workflow", label: "Workflow" },
   { id: "field-notes", label: "Field notes" },
 ];
+
+const configSnippet = `{
+  "chapters": [
+    { "id": "arrival", "motionMode": "reveal" },
+    { "id": "workflow", "motionMode": "static" }
+  ],
+  "motion": {
+    "nativeScrolling": true,
+    "globalScene": false,
+    "maxLocalScrollStories": 1
+  }
+}`;
 
 function LeafPassage() {
   return (
@@ -44,7 +57,7 @@ function Experience({ cycle, replay }: { cycle: number; replay: () => void }) {
     <>
       <PageProgress />
       <header className="site-header">
-        <a className="site-mark" href="#arrival" aria-label="Cinematic Web Starter home">CW</a>
+        <a className="site-mark" href="#arrival" aria-label="Cinematic Web Framework home">CW</a>
         <ActiveSectionNav items={navItems} />
       </header>
 
@@ -80,12 +93,35 @@ function Experience({ cycle, replay }: { cycle: number; replay: () => void }) {
           </div>
         </section>
 
+        <section className="workflow-section" id="workflow" aria-labelledby="workflow-title">
+          <div className="workflow-orbit" aria-hidden="true"><i /><i /><i /></div>
+          <Reveal className="workflow-intro">
+            <p className="eyebrow">Agent development protocol</p>
+            <h2 id="workflow-title">Context before choreography.</h2>
+            <p>LLM collaborators move quickly. The framework gives them a durable contract so speed does not erase intent, mobile composition, or engineering judgment.</p>
+          </Reveal>
+          <ol className="workflow-steps" aria-label="Agent workflow">
+            <li><span>01</span><strong>Context</strong><p>Separate verified truth from assumptions and define the first-viewport promise.</p></li>
+            <li><span>02</span><strong>Compose</strong><p>Give every chapter one job, one mobile strategy, and one motion mode.</p></li>
+            <li><span>03</span><strong>Choreograph</strong><p>Add bounded Motion only after semantics, controls, and fallbacks work.</p></li>
+            <li><span>04</span><strong>Validate</strong><p>Run structural, accessibility, responsive, performance, and privacy gates.</p></li>
+          </ol>
+          <Reveal className="config-example" delay={0.12}>
+            <div>
+              <p className="eyebrow">Machine-readable contract</p>
+              <h3>One config agents and CI can share.</h3>
+              <p>Budgets and exceptions stay reviewable. The deployed experience contains no model SDK or prompt API.</p>
+            </div>
+            <pre aria-label="Example cinematic configuration"><code>{configSnippet}</code></pre>
+          </Reveal>
+        </section>
+
         <section className="notes-section" id="field-notes" aria-labelledby="notes-title">
           <LeafPassage />
           <Reveal className="notes-heading">
             <p className="eyebrow">Field notes</p>
             <h2 id="notes-title">A strong system makes restraint repeatable.</h2>
-            <p>The starter includes accessible disclosure patterns, performance guardrails, and durable planning templates—not just animation snippets.</p>
+            <p>The framework includes accessible disclosure patterns, performance guardrails, and durable planning templates—not just animation snippets.</p>
           </Reveal>
           <div className="notes-grid">
             <Reveal className="paper-panel" delay={0.08}>
@@ -105,7 +141,7 @@ function Experience({ cycle, replay }: { cycle: number; replay: () => void }) {
           </div>
         </section>
 
-        <section className="quiet-form" aria-labelledby="form-title">
+        <section className="quiet-form" id="quiet-zone" aria-labelledby="form-title">
           <div>
             <p className="eyebrow">The quiet zone</p>
             <h2 id="form-title">Let the interface settle when the user acts.</h2>
@@ -122,7 +158,7 @@ function Experience({ cycle, replay }: { cycle: number; replay: () => void }) {
       </main>
 
       <footer>
-        <p>Cinematic Web Starter · React + Motion</p>
+        <p>Cinematic Web Framework · React + Motion</p>
         <div><a href="https://github.com/evoltriet/cinematic-web-starter">View source</a><button type="button" onClick={replay}>Replay opening</button></div>
       </footer>
     </>
@@ -134,7 +170,7 @@ export default function App() {
   return (
     <MotionProvider>
       <CeremonialGate focusTargetRef={titleRef} enterLabel="Open the field guide" recipient="A small study in depth">
-        {({ cycle, replay }) => <div ref={(node) => { if (node) titleRef.current = node.querySelector("h1"); }}><Experience cycle={cycle} replay={replay} /></div>}
+        {({ cycle, replay, revealed }) => <div ref={(node) => { if (node) titleRef.current = node.querySelector("h1"); }}>{revealed ? <Experience cycle={cycle} replay={replay} /> : null}</div>}
       </CeremonialGate>
     </MotionProvider>
   );

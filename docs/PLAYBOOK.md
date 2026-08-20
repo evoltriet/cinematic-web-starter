@@ -1,6 +1,8 @@
 # Web/Mobile Experience Playbook
 
-This is the repeatable workflow behind the starter. Move through it in order; animation code is deliberately not the first step.
+This is the repeatable workflow behind the framework. Move through it in order; animation code is deliberately not the first step. Coding agents and human collaborators share the same machine-readable config and durable context.
+
+Before planning, run `pnpm cinematic:check` and read the packet from `pnpm cinematic:context -- --format markdown`.
 
 ## 1. Establish durable truth
 
