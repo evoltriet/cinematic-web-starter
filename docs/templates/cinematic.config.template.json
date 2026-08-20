@@ -1,0 +1,47 @@
+{
+  "$schema": "./schemas/cinematic-config.schema.json",
+  "schemaVersion": 1,
+  "project": {
+    "name": "{{PROJECT_NAME}}",
+    "audience": "Define the intended audience",
+    "primaryAction": "Define the primary action",
+    "firstViewportPromise": "Define the first-viewport promise"
+  },
+  "chapters": [
+    {
+      "id": "arrival",
+      "title": "Arrival",
+      "motionMode": "reveal",
+      "composition": "Define desktop and mobile composition",
+      "decorativePlanes": 1
+    }
+  ],
+  "responsive": {
+    "mobileBreakpointPx": 700,
+    "tabletBreakpointPx": 900,
+    "mobileStrategy": "art-directed"
+  },
+  "motion": {
+    "runtime": "motion",
+    "nativeScrolling": true,
+    "globalScene": false,
+    "pointerTracking": false,
+    "maxDecorativePlanesPerChapter": 2,
+    "maxLocalScrollStories": 1
+  },
+  "budgets": {
+    "initialJavaScriptGzipKb": 180,
+    "cssGzipKb": 30,
+    "heroImageKb": 400,
+    "mobileImagesTotalKb": 1800,
+    "desktopImagesTotalKb": 3000
+  },
+  "accessibility": {
+    "keyboard": true,
+    "reducedMotion": "complete-static",
+    "textZoomPercent": 200,
+    "contrast": "WCAG-AA",
+    "minimumTouchTargetPx": 44
+  },
+  "exceptions": []
+}

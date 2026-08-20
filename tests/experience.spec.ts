@@ -43,6 +43,15 @@ test("supports keyboard opener, tabs, accordion, and replay", async ({ page }) =
   await expect(page.getByRole("dialog")).toBeVisible();
 });
 
+test("explains the agent workflow and readable configuration", async ({ page }) => {
+  await openExperience(page);
+  await page.getByRole("link", { name: "Workflow" }).click();
+  await expect(page.getByRole("heading", { name: "Context before choreography." })).toBeVisible();
+  await expect(page.getByRole("list", { name: "Agent workflow" }).getByText("Context", { exact: true })).toBeVisible();
+  const config = page.getByLabel("Example cinematic configuration");
+  await expect(config).toContainText('"nativeScrolling": true');
+});
+
 test("reduced motion shows complete content without passages", async ({ browser }) => {
   const context = await browser.newContext({ reducedMotion: "reduce", viewport: { width: 390, height: 844 } });
   const page = await context.newPage();

@@ -1,36 +1,32 @@
 # Project Context
 
-Last updated: YYYY-MM-DD
+Last updated: {{DATE}}
 
 Read this before planning or implementation. Verified facts and assumptions must remain separate.
 
 ## North star
 
-One paragraph describing the experience, audience, and standard of quality.
+Describe the experience, audience, and standard of quality for {{PROJECT_NAME}}.
 
 ## Verified facts
 
-- Fact with source or owner.
+- Add facts with a source or accountable owner.
 
 ## Product contract
 
-- Responsive behavior.
-- Primary interaction and success state.
-- Accessibility and performance requirements.
-- Public interfaces that must remain compatible.
+- Define responsive behavior, primary interaction, success state, accessibility, performance, and stable interfaces.
 
 ## Current implementation
 
-- Stack, deployment, persistence, and completed behavior.
+- Record the stack, deployment, persistence, and completed behavior.
 
 ## Approved design direction
 
-- Art direction, tokens, motion vocabulary, and explicit anti-patterns.
+- Record art direction, tokens, motion vocabulary, and explicit anti-patterns.
 
 ## Assumptions and backlog
 
-- Link to the assumptions ledger.
-- Unresolved integrations, content, and launch operations.
+- Link to the assumptions ledger and unresolved integrations, content, and launch operations.
 
 ## Change protocol
 

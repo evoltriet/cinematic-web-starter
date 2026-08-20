@@ -2,8 +2,7 @@
 
 ## Budgets
 
-- Initial JavaScript: approximately 180 KB gzip or less.
-- CSS: approximately 30 KB gzip or less.
+- Initial JavaScript and CSS limits come from `cinematic.config.json` (defaults: approximately 180 KB and 30 KB gzip).
 - Eager media: first viewport only.
 - Active scenic planes: one background plus no more than two foreground/midground planes per chapter.
 

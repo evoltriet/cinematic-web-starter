@@ -1,12 +1,14 @@
-# Agent Instructions
+# Agent Contract for {{PROJECT_NAME}}
 
-Before planning, reviewing, or implementing:
+Read these files before planning or editing:
 
-1. Read `PROJECT_CONTEXT.md` in full.
-2. Read the design context and content assumptions before changing user-facing design or copy.
-3. Keep verified facts separate from assumptions.
-4. Preserve public interfaces, persistent data, deployment identity, and access policy unless explicitly authorized.
-5. Use the approved animation runtime only.
-6. Update durable context whenever project truth changes.
-7. Keep essential content readable without decorative interaction.
-8. Run the project’s validation and privacy gates before publication.
+1. `cinematic.config.json`
+2. `PROJECT_CONTEXT.md`
+3. `DESIGN_CONTEXT.md`
+4. `CONTENT_ASSUMPTIONS.md`
+5. `EXPERIENCE_PLAN.md`
+6. `ASSET_PLAN.md`
+
+Keep verified facts separate from assumptions. Preserve native scrolling, semantic reading order, keyboard behavior, reduced-motion completeness, mobile-specific composition, configured budgets, and public interfaces. Use one declared motion mode per chapter. Record approved exceptions in the config and update durable context when project truth changes.
+
+Run `pnpm cinematic:check` before implementation and `pnpm validate` before release.

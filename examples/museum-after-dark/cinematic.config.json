@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/cinematic-config.schema.json",
+  "schemaVersion": 1,
+  "project": {
+    "name": "Museum After Dark",
+    "audience": "Curious evening visitors and cultural members",
+    "primaryAction": "Reserve a timed visit",
+    "firstViewportPromise": "A quiet nocturnal path through material, memory, and light"
+  },
+  "chapters": [
+    { "id": "threshold", "title": "Threshold", "motionMode": "reveal", "composition": "low-light architectural portal", "decorativePlanes": 2 },
+    { "id": "collection", "title": "Collection", "motionMode": "triggered-passage", "composition": "artifact-led editorial sequence", "decorativePlanes": 1 },
+    { "id": "visit", "title": "Visit", "motionMode": "static", "composition": "high-contrast reservation panel", "decorativePlanes": 0 }
+  ],
+  "responsive": { "mobileBreakpointPx": 700, "tabletBreakpointPx": 900, "mobileStrategy": "art-directed" },
+  "motion": { "runtime": "motion", "nativeScrolling": true, "globalScene": false, "pointerTracking": false, "maxDecorativePlanesPerChapter": 2, "maxLocalScrollStories": 0 },
+  "budgets": { "initialJavaScriptGzipKb": 160, "cssGzipKb": 28, "heroImageKb": 350, "mobileImagesTotalKb": 1400, "desktopImagesTotalKb": 2400 },
+  "accessibility": { "keyboard": true, "reducedMotion": "complete-static", "textZoomPercent": 200, "contrast": "WCAG-AA", "minimumTouchTargetPx": 44 },
+  "exceptions": []
+}

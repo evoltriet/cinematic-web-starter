@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/cinematic-config.schema.json",
+  "schemaVersion": 1,
+  "project": {
+    "name": "Field Camera Launch",
+    "audience": "Traveling image-makers who value durable tools",
+    "primaryAction": "Compare the field system",
+    "firstViewportPromise": "A compact camera story moving from weather to image"
+  },
+  "chapters": [
+    { "id": "weather", "title": "Weather", "motionMode": "reveal", "composition": "product silhouette in atmospheric rain", "decorativePlanes": 2 },
+    { "id": "mechanism", "title": "Mechanism", "motionMode": "local-scroll-story", "composition": "contained three-step material journey", "decorativePlanes": 1 },
+    { "id": "system", "title": "System", "motionMode": "static", "composition": "quiet specification and comparison zone", "decorativePlanes": 0 }
+  ],
+  "responsive": { "mobileBreakpointPx": 700, "tabletBreakpointPx": 900, "mobileStrategy": "art-directed" },
+  "motion": { "runtime": "motion", "nativeScrolling": true, "globalScene": false, "pointerTracking": false, "maxDecorativePlanesPerChapter": 2, "maxLocalScrollStories": 1 },
+  "budgets": { "initialJavaScriptGzipKb": 170, "cssGzipKb": 30, "heroImageKb": 400, "mobileImagesTotalKb": 1600, "desktopImagesTotalKb": 2800 },
+  "accessibility": { "keyboard": true, "reducedMotion": "complete-static", "textZoomPercent": 200, "contrast": "WCAG-AA", "minimumTouchTargetPx": 44 },
+  "exceptions": []
+}

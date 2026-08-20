@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evoltriet.github.io/cinematic-web-starter/schemas/cinematic-config.schema.json",
+  "title": "Cinematic Web Framework project contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "project", "chapters", "responsive", "motion", "budgets", "accessibility", "exceptions"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "audience", "primaryAction", "firstViewportPromise"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "audience": { "type": "string", "minLength": 1 },
+        "primaryAction": { "type": "string", "minLength": 1 },
+        "firstViewportPromise": { "type": "string", "minLength": 1 }
+      }
+    },
+    "chapters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "motionMode", "composition", "decorativePlanes"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "title": { "type": "string", "minLength": 1 },
+          "motionMode": { "enum": ["static", "reveal", "triggered-passage", "local-scroll-story"] },
+          "composition": { "type": "string", "minLength": 1 },
+          "decorativePlanes": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "responsive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mobileBreakpointPx", "tabletBreakpointPx", "mobileStrategy"],
+      "properties": {
+        "mobileBreakpointPx": { "type": "integer", "minimum": 320 },
+        "tabletBreakpointPx": { "type": "integer", "minimum": 600 },
+        "mobileStrategy": { "enum": ["art-directed", "shared-composition"] }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runtime", "nativeScrolling", "globalScene", "pointerTracking", "maxDecorativePlanesPerChapter", "maxLocalScrollStories"],
+      "properties": {
+        "runtime": { "enum": ["motion"] },
+        "nativeScrolling": { "const": true },
+        "globalScene": { "const": false },
+        "pointerTracking": { "type": "boolean" },
+        "maxDecorativePlanesPerChapter": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "maxLocalScrollStories": { "type": "integer", "minimum": 0, "maximum": 2 }
+      }
+    },
+    "budgets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["initialJavaScriptGzipKb", "cssGzipKb", "heroImageKb", "mobileImagesTotalKb", "desktopImagesTotalKb"],
+      "properties": {
+        "initialJavaScriptGzipKb": { "type": "number", "exclusiveMinimum": 0 },
+        "cssGzipKb": { "type": "number", "exclusiveMinimum": 0 },
+        "heroImageKb": { "type": "number", "exclusiveMinimum": 0 },
+        "mobileImagesTotalKb": { "type": "number", "exclusiveMinimum": 0 },
+        "desktopImagesTotalKb": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "accessibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["keyboard", "reducedMotion", "textZoomPercent", "contrast", "minimumTouchTargetPx"],
+      "properties": {
+        "keyboard": { "const": true },
+        "reducedMotion": { "enum": ["complete-static"] },
+        "textZoomPercent": { "type": "integer", "minimum": 200 },
+        "contrast": { "enum": ["WCAG-AA", "WCAG-AAA"] },
+        "minimumTouchTargetPx": { "type": "integer", "minimum": 44 }
+      }
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rule", "rationale", "approvedBy"],
+        "properties": {
+          "rule": { "type": "string", "minLength": 1 },
+          "rationale": { "type": "string", "minLength": 12 },
+          "approvedBy": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

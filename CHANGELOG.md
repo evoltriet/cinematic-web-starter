@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 — 2026-08-20
+
+- Reframed the project as Cinematic Web Framework for provider-neutral LLM-assisted development.
+- Added the versioned cinematic project contract, schema, initializer, validator, and secret-safe context packet.
+- Added a portable agent skill, durable root context, phase recipes, planning templates, and two reference packs.
+- Added an agent workflow chapter to the demo while preserving every runtime component export.
+- Made configured budgets and structural guardrails part of validation and CI.
+
 ## 0.1.0 — 2026-08-12
 
 - Introduced the React, TypeScript, Vite, and Motion starter.
