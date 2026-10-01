@@ -23,7 +23,7 @@
     "validate": "pnpm cinematic:check && pnpm lint && pnpm typecheck && pnpm test && pnpm test:tooling && pnpm build && pnpm test:budgets && pnpm test:sanitize"
   },
   "dependencies": {
-    "motion": "^13.0.0",
+    "motion": "^13.4.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
